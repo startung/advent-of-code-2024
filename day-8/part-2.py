@@ -3,7 +3,7 @@ from itertools import combinations
 from colorama import Fore
 
 antennas = defaultdict(list)
-file = "input"
+file = "example"
 with open(file, "r") as f:
     for y, line in enumerate(f.readlines()):
         for x, frequency in enumerate(line.rstrip()):

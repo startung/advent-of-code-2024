@@ -3,7 +3,7 @@ from itertools import combinations
 from colorama import Fore
 
 antennas = defaultdict(list)
-file = "input"
+file = "example"
 with open(file, "r") as f:
     for y, line in enumerate(f.readlines()):
         for x, frequency in enumerate(line.rstrip()):
@@ -51,9 +51,9 @@ def print_antenode(x, y, key):
     input()
 
 
-# for i, antinode in enumerate(antinodes):
-#     print(Fore.GREEN + str(i) + Fore.RESET + ":", *antinode)
-#     print_antenode(*antinode)
+for i, antinode in enumerate(antinodes):
+    print(Fore.GREEN + str(i) + Fore.RESET + ":", *antinode)
+    print_antenode(*antinode)
 
 unique_antinodes = set((x, y) for x, y, _ in antinodes)
 
